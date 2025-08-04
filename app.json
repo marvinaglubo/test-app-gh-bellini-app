@@ -1,0 +1,38 @@
+{
+  "name": "test-app-gh",
+  "type": "app",
+  "defaultPage": "home",
+  "config": {
+    "config": {
+      "parameters": [],
+      "script": ""
+    },
+    "modules": [],
+    "properties": {
+      "version": "1.0.0-SNAPSHOT"
+    },
+    "environments": [],
+    "themes": [],
+    "auth": {
+      "enabled": false,
+      "mockedUserAccounts": []
+    }
+  },
+  "directories": {
+    "assets": [],
+    "components": [
+      {
+        "id": "3TyfqIhUCylpl6ECW21m8",
+        "name": "dir"
+      }
+    ],
+    "pages": [],
+    "scripts": [],
+    "services": [],
+    "stylesheets": []
+  },
+  "externalScripts": [],
+  "externalStylesheets": [],
+  "localScripts": [],
+  "localStylesheets": []
+}

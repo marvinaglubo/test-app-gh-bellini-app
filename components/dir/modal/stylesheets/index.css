@@ -1,0 +1,171 @@
+modal  {
+  --bln-button-default-bg-color: var(--bln-modal-default-button-bg-color);
+  --bln-button-default-hovered-bg-color: var(--bln-modal-default-button-hovered-bg-color);
+  --bln-button-default-active-bg-color: var(--bln-modal-default-button-active-bg-color);
+  --bln-button-default-text-color: var(--bln-modal-default-button-text-color);
+  --bln-button-default-hovered-text-color: var(--bln-modal-default-button-hovered-text-color);
+  --bln-button-default-active-text-color: var(--bln-modal-default-active-hovered-text-color);
+  --bln-button-primary-bg-color: var(--bln-modal-primary-button-bg-color);
+  --bln-button-primary-hovered-bg-color: var(--bln-modal-primary-button-hovered-bg-color);
+  --bln-button-primary-active-bg-color: var(--bln-modal-primary-button-active-bg-color);
+  --bln-button-primary-text-color: var(--bln-modal-primary-button-text-color);
+  --bln-button-primary-hovered-text-color: var(--bln-modal-primary-button-hovered-text-color);
+  --bln-button-primary-active-text-color: var(--bln-modal-primary-active-hovered-text-color);
+  --bln-button-font-family: var(--bln-modal-button-font-family);
+  --bln-button-font-size: var(--bln-modal-button-font-size);
+  --bln-button-font-weight: var(--bln-modal-button-font-weight);
+  --bln-button-padding: var(--bln-modal-button-padding);
+  --bln-button-margin: var(--bln-modal-button-margin);
+  --bln-button-roundness: var(--bln-modal-button-roundness);
+  --bln-button-width: var(--bln-modal-button-width);
+  --bln-button-min-width: var(--bln-modal-button-min-width);
+  --bln-button-max-width: var(--bln-modal-button-max-width);
+  --bln-button-height: var(--bln-modal-button-height);
+  --bln-button-min-height: var(--bln-modal-button-min-height);
+  --bln-button-max-height: var(--bln-modal-button-max-height);
+
+  display: flex;
+  flex-direction: column;
+  border: var(--bln-modal-border-style) var(--bln-modal-border-width) var(--bln-modal-border-color);
+  border-radius: var(--bln-modal-border-radius);
+  width: var(--bln-modal-width);
+  min-width: 300px;
+}
+
+
+modal > .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--bln-modal-header-border-style) var(--bln-modal-header-border-width) var(--bln-modal-header-border-color);
+  border-bottom: none;
+  background-color: var(--bln-modal-header-background-color);
+  padding: 10px;
+  border-radius: calc(var(--bln-modal-border-radius) - 0.5rem) calc(var(--bln-modal-border-radius)  - 0.5rem) 0 0;
+}
+
+modal > .modal-header > .modal-title {
+  color: var(--bln-modal-header-title-text-color);
+  font-weight: var(--bln-modal-header-title-font-weight);
+  font-size: var(--bln-modal-header-title-font-size);
+  font-family: var(--bln-modal-header-title-font-family);
+}
+
+modal > .modal-header > .modal-close {
+  cursor: pointer;
+  color: var(--bln-modal-header-title-text-color);
+  padding: 5px 10px;
+}
+
+modal > .modal-body {
+  border: var(--bln-modal-body-border-style) var(--bln-modal-body-border-width) var(--bln-modal-body-border-color);
+  background-color: var(--bln-modal-body-background-color);
+  padding: 10px;
+  min-width: 300px;
+  min-height: 200px;
+  height: var(--bln-modal-height);
+  box-sizing: border-box;
+}
+
+modal > .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border: var(--bln-modal-footer-border-style) var(--bln-modal-footer-border-width) var(--bln-modal-footer-border-color);
+  border-top: none;
+  background-color: var(--bln-modal-footer-background-color);
+  padding: 10px;
+  border-radius: 0 0 calc(var(--bln-modal-border-radius) - 0.5rem) calc(var(--bln-modal-border-radius)  - 0.5rem)
+}
+
+modal .btn-cancel {
+  margin-right: 0.5rem;
+}
+
+/* Modal Fade Animation */
+@keyframes fade {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Modal Flip Animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-out {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+/* Modal Popup Animation */
+@keyframes popup {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popup-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Modal Slide Animation */
+@keyframes slide {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+}
